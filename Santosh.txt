@@ -1,0 +1,42 @@
+
+1)select * from hotel;
+
+2)select * from hotel where city='New York';
+
+3)select name, city from guest order by city;
+
+4)select * from room where hotel_type='N' order by price;
+
+5)select count(*) from hotel;
+
+6)select distinct city from guest;
+
+7)select AVG(Price) from room;
+
+8)select Hotel.Name, Room.Room_No, Room.Hotel_Type from Hotel join Room on Hotel.Hotel_No=Room.Hotel_No;
+
+9)select hotel.name,booking.date_from,booking.date_to,booking.room_no 
+from hotel join booking on hotel.hotel_no=booking.hotel_no where city='New York';
+
+10)select count(*) from booking where date_from like '%SEP%';
+
+11)select Guest.Name,Guest.City from Guest join Booking on Guest.Guest_No=Booking.Guest_No where Booking.date_from like '%AUG%';
+
+12)select hotel.name,room.room_no from room join hotel on hotel.hotel_no=room.hotel_no where room_no not in (select room_no from booking); 
+
+13)select hotel.name,hotel.city from hotel join room on hotel.hotel_no=room.hotel_no where price in (select max(price) from room); 
+  
+15)select city, avg(price) from room join hotel on hotel.hotel_no=room.hotel_no group by city;
+ 
+
+
+
+
+
+
+
+
+
+
+
+
